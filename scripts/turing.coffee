@@ -1,5 +1,5 @@
 module.exports = (robot) ->
-  robot.hear /^\/萌妹子( +(.*))?/i, (msg) ->
+  robot.hear /^萌妹子 (.+)/i, (msg) ->
     turingKeyword = msg.match[1]
     if(!turingKeyword)
       turingKeyword = "喂"

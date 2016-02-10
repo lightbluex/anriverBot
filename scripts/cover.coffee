@@ -1,5 +1,5 @@
 module.exports = (robot) ->
-  robot.hear /^\/giphy( +(.*))?/i, (msg) ->
+  robot.hear /^giphy (.+)/i, (msg) ->
     giphyKeyword = msg.match[1]
     if(!giphyKeyword)
       giphyKeyword = "lol"
@@ -21,7 +21,7 @@ module.exports = (robot) ->
 
         msg.send gifurl
 
-  robot.hear /^\/tumblr( +(.*))?/i, (msg) ->
+  robot.hear /^tumblr (.+)/i, (msg) ->
     tumblrKeyword = msg.match[1]
     if(!tumblrKeyword)
       tumblrKeyword = "girl"
